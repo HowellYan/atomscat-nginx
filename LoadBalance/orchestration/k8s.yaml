@@ -7,7 +7,7 @@ spec:
     - name: nginx-backend-service1
       port: 8080
       targetPort: 8080
-      nodePort: 30003
+      nodePort: 30013
       protocol: TCP
   selector:
     app: nginx-backend-service1
@@ -22,7 +22,7 @@ spec:
     - name: nginx-backend-service2
       port: 8080
       targetPort: 8080
-      nodePort: 30002
+      nodePort: 30012
       protocol: TCP
   selector:
     app: nginx-backend-service2
@@ -37,7 +37,7 @@ spec:
     - name: atomscat-nginx-main
       port: 8030
       targetPort: 8030
-      nodePort: 30001
+      nodePort: 30011
       protocol: TCP
   selector:
     app: atomscat-nginx-main
