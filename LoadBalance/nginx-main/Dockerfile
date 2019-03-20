@@ -1,8 +1,6 @@
 FROM nginx
 MAINTAINER Howell
 ADD ./server.conf /etc/nginx/conf.d/server.conf
-ADD ./server.conf /etc/nginx/conf.d/server.conf
-RUN mkdir /tools; mkdir /tools/apps; chmod -R 777 /tools
-ADD ./dist  /tools/apps
+ADD ./upstream.conf /etc/nginx/conf.d/upstream.conf
 EXPOSE 8030
 CMD ["nginx", "-g", "daemon off;"]
