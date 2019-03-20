@@ -101,7 +101,7 @@ spec:
     spec:
       containers:
         - name: nginx-main
-          image: nginx-main:latest
+          image: atomscat-nginx-main:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8030
