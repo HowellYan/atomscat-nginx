@@ -31,16 +31,16 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-main
+  name: atomscat-nginx-main
 spec:
   ports:
-    - name: nginx-main
+    - name: atomscat-nginx-main
       port: 8030
       targetPort: 8030
       nodePort: 30001
       protocol: TCP
   selector:
-    app: nginx-main
+    app: atomscat-nginx-main
   type: NodePort
 ---
 apiVersion: apps/v1
@@ -88,19 +88,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-main
+  name: atomscat-nginx-main
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-main
+      app: atomscat-nginx-main
   template:
     metadata:
       labels:
-        app: nginx-main
+        app: atomscat-nginx-main
     spec:
       containers:
-        - name: nginx-main
+        - name: atomscat-nginx-main
           image: atomscat-nginx-main:latest
           imagePullPolicy: IfNotPresent
           ports:
